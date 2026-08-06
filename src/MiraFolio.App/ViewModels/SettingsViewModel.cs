@@ -21,6 +21,8 @@ public partial class SettingsViewModel : ObservableObject
     private const double CanvasTargetW = 560;
     private const double CanvasTargetH = 320;
 
+    public string AppVersion { get; } = GetAppVersion();
+
     [ObservableProperty]
     private ObservableCollection<MonitorConfigViewModel> _monitors = new();
 
@@ -42,6 +44,17 @@ public partial class SettingsViewModel : ObservableObject
     public IReadOnlyList<DisplayModeOption> DisplayModeOptions { get; private set; } = [];
     public IReadOnlyList<PlaybackOrderOption> PlaybackOrderOptions { get; private set; } = [];
     public IReadOnlyList<IntervalUnitOption> IntervalUnitOptions { get; private set; } = [];
+
+    private static string GetAppVersion()
+    {
+        var version = typeof(SettingsViewModel).Assembly.GetName().Version;
+        if (version == null)
+            return "v—";
+
+        return version.Build >= 0
+            ? $"v{version.Major}.{version.Minor}.{version.Build}"
+            : $"v{version.Major}.{version.Minor}";
+    }
 
     public SettingsViewModel(
         IMonitorService monitorService,

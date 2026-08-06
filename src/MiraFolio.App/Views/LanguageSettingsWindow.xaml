@@ -46,7 +46,8 @@
     <StackPanel Grid.Row="2">
       <TextBlock Text="{DynamicResource LanguageLabel}" Margin="0,0,0,7" Foreground="#C7C4DF"/>
       <ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage}"
-                DisplayMemberPath="NativeName" Height="38" Padding="10,5"
+                DisplayMemberPath="NativeName" Height="34" Padding="10,0"
+                VerticalContentAlignment="Center"
                 Background="White" Foreground="#17172F" BorderBrush="#4C3B70"
                 ItemContainerStyle="{StaticResource LanguageComboBoxItemStyle}"/>
     </StackPanel>

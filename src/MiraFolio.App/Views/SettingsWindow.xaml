@@ -541,6 +541,18 @@
             <TextBlock Text="MiraFolio"
                        FontSize="16" FontWeight="Bold"
                        Foreground="White" VerticalAlignment="Center"/>
+            <Border Margin="10,0,0,0"
+                    Padding="7,2"
+                    CornerRadius="8"
+                    Background="#1B1B38"
+                    BorderBrush="#32325A"
+                    BorderThickness="1"
+                    VerticalAlignment="Center">
+              <TextBlock Text="{Binding AppVersion}"
+                         FontSize="10"
+                         Foreground="#9A97B8"
+                         VerticalAlignment="Center"/>
+            </Border>
           </StackPanel>
         </Grid>
 
