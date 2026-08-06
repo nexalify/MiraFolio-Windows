@@ -1,4 +1,4 @@
-name: Build release draft
+name: Build GitHub release
 
 on:
   push:
@@ -63,54 +63,9 @@ jobs:
         shell: pwsh
         run: choco install innosetup --yes --no-progress
 
-      - name: Import optional signing certificate
-        id: signing
-        shell: pwsh
-        env:
-          SIGNING_PFX_BASE64: ${{ secrets.WINDOWS_SIGNING_PFX_BASE64 }}
-          SIGNING_PFX_PASSWORD: ${{ secrets.WINDOWS_SIGNING_PFX_PASSWORD }}
-          SIGNING_TIMESTAMP_URL: ${{ secrets.WINDOWS_SIGNING_TIMESTAMP_URL }}
-        run: |
-          if ([string]::IsNullOrWhiteSpace($env:SIGNING_PFX_BASE64)) {
-            "enabled=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            Write-Warning "Signing secrets are not configured; artifacts will be unsigned."
-            exit 0
-          }
-
-          $certificatePath = Join-Path $env:RUNNER_TEMP "mirafolio-signing.pfx"
-          [IO.File]::WriteAllBytes(
-            $certificatePath,
-            [Convert]::FromBase64String($env:SIGNING_PFX_BASE64))
-          $securePassword = ConvertTo-SecureString $env:SIGNING_PFX_PASSWORD -AsPlainText -Force
-          $certificate = Import-PfxCertificate `
-            -FilePath $certificatePath `
-            -CertStoreLocation Cert:\CurrentUser\My `
-            -Password $securePassword
-          $signTool = Get-ChildItem "${env:ProgramFiles(x86)}\Windows Kits\10\bin" `
-            -Filter signtool.exe -Recurse |
-            Where-Object FullName -Match '\\x64\\' |
-            Sort-Object FullName -Descending |
-            Select-Object -First 1 -ExpandProperty FullName
-          if (-not $signTool) {
-            throw "signtool.exe was not found"
-          }
-
-          "MIRAFOLIO_SIGNTOOL=$signTool" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "MIRAFOLIO_CERT_SHA1=$($certificate.Thumbprint)" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "MIRAFOLIO_TIMESTAMP_URL=$env:SIGNING_TIMESTAMP_URL" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "SIGNING_PFX_PATH=$certificatePath" | Out-File -FilePath $env:GITHUB_ENV -Append
-          "enabled=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-
-      - name: Build application and installer
+      - name: Build unsigned application and installer
         shell: cmd
         run: build-installer.bat %VERSION%
-
-      - name: Verify Authenticode signatures
-        if: steps.signing.outputs.enabled == 'true'
-        shell: pwsh
-        run: |
-          & $env:MIRAFOLIO_SIGNTOOL verify /pa /v publish/MiraFolio.exe
-          & $env:MIRAFOLIO_SIGNTOOL verify /pa /v "dist/MiraFolio-Setup-$env:VERSION-win-x64.exe"
 
       - name: Package portable build and checksums
         shell: pwsh
@@ -165,7 +120,7 @@ jobs:
             artifacts/release/*.zip
           sbom-path: artifacts/release/MiraFolio-${{ env.VERSION }}-sbom.spdx.json
 
-      - name: Create or update draft release
+      - name: Create or update GitHub release draft
         if: github.event_name == 'push' || inputs.create_draft_release == true
         shell: pwsh
         env:
@@ -175,16 +130,23 @@ jobs:
           if ($LASTEXITCODE -eq 0) {
             gh release upload $env:RELEASE_TAG artifacts/release/* --clobber
           } else {
+            $releaseNotes = @'
+          > [!IMPORTANT]
+          > These Windows binaries are currently not code-signed. Windows SmartScreen may show an
+          > unrecognized-app warning on first run. Download only from this official release and
+          > compare the file's SHA-256 hash with `SHA256SUMS.txt` before running it.
+          '@
+
+            if ("${{ github.event_name }}" -eq "push") {
+              $tagArguments = @("--verify-tag")
+            } else {
+              $tagArguments = @("--target", $env:GITHUB_SHA)
+            }
+
             gh release create $env:RELEASE_TAG artifacts/release/* `
               --draft `
               --generate-notes `
+              --notes $releaseNotes `
+              @tagArguments `
               --title "MiraFolio $env:VERSION"
           }
-
-      - name: Remove signing certificate
-        if: always() && steps.signing.outputs.enabled == 'true'
-        shell: pwsh
-        run: |
-          Remove-Item $env:SIGNING_PFX_PATH -Force -ErrorAction SilentlyContinue
-          Get-ChildItem Cert:\CurrentUser\My\$env:MIRAFOLIO_CERT_SHA1 |
-            Remove-Item -Force -ErrorAction SilentlyContinue

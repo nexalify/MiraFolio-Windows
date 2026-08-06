@@ -48,7 +48,7 @@ if errorlevel 1 exit /b 1
 
 echo.
 echo Installer created: "%SETUP_EXE%"
-if not defined MIRAFOLIO_SIGNTOOL echo WARNING: The installer is unsigned. See docs\windows-release.md before public distribution.
+if not defined MIRAFOLIO_SIGNTOOL echo INFO: The installer is unsigned, as expected for the current GitHub release flow.
 exit /b 0
 
 :find_iscc
