@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  A local-first wallpaper rotation app built for real Windows multi-monitor setups.
+  A local-first wallpaper rotation app for real multi-monitor setups and very large collections.
 </p>
 
 <p align="center">
@@ -36,6 +36,10 @@
 
 - **Independent display control.** Give each monitor its own image folder, rotation interval,
   playback order, and enabled state.
+- **Built for tens of thousands of wallpapers.** Folders are indexed in the background and image
+  metadata is cached, so image dimensions do not need to be reread on every start.
+- **Curate your collection as you watch.** Dismiss a wallpaper you do not like with one click. It
+  leaves future rotation without deleting the source file and can be restored from the Recycle Bin.
 - **Reliable when your setup changes.** Disconnecting one display does not hide or interrupt the
   others, and newly connected displays can be configured as soon as Windows detects them.
 - **Smarter image choices.** Match landscape images to landscape displays, portrait images to
@@ -47,8 +51,9 @@
 
 - Rotate without repeats, sequentially, or in reverse order.
 - Pause rotation on an individual display while a game, presentation, or video is fullscreen.
-- Change, reveal, or remove the current wallpaper with quick actions.
-- Restore removed images later, or permanently delete them only after explicit confirmation.
+- Change, reveal, or dismiss the current wallpaper with quick actions.
+- Review dismissed images in the Recycle Bin, restore them later, or permanently delete them only
+  after explicit confirmation.
 - Start with Windows and keep everyday controls in the notification area.
 - Manage mixed landscape and portrait displays from one visual layout.
 
