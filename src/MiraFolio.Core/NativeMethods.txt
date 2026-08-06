@@ -1,0 +1,12 @@
+FindWindow
+FindWindowEx
+EnumWindows
+SendMessage
+SetParent
+ShowWindow
+SHQueryUserNotificationState
+GetForegroundWindow
+GetWindowRect
+MonitorFromWindow
+GetMonitorInfo
+EnumDisplayMonitors

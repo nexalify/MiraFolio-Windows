@@ -1,0 +1,190 @@
+name: Build release draft
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Semantic version without the v prefix
+        required: true
+        default: "1.0.0"
+      create_draft_release:
+        description: Create or update a draft GitHub Release
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+  artifact-metadata: write
+
+jobs:
+  release:
+    name: Build Windows release artifacts
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Resolve version
+        shell: pwsh
+        run: |
+          if ("${{ github.event_name }}" -eq "push") {
+            $version = "${{ github.ref_name }}".TrimStart("v")
+          } else {
+            $version = "${{ inputs.version }}"
+          }
+
+          if ($version -notmatch '^\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?$') {
+            throw "Invalid semantic version: $version"
+          }
+
+          "VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "RELEASE_TAG=v$version" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.302
+
+      - name: Restore, build, and test
+        shell: pwsh
+        run: |
+          dotnet restore MiraFolio.sln -p:NuGetAudit=true -p:NuGetAuditMode=all
+          dotnet build MiraFolio.sln -c Release --no-restore -p:Version=$env:VERSION
+          dotnet test src/MiraFolio.Tests/MiraFolio.Tests.csproj -c Release --no-build
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: choco install innosetup --yes --no-progress
+
+      - name: Import optional signing certificate
+        id: signing
+        shell: pwsh
+        env:
+          SIGNING_PFX_BASE64: ${{ secrets.WINDOWS_SIGNING_PFX_BASE64 }}
+          SIGNING_PFX_PASSWORD: ${{ secrets.WINDOWS_SIGNING_PFX_PASSWORD }}
+          SIGNING_TIMESTAMP_URL: ${{ secrets.WINDOWS_SIGNING_TIMESTAMP_URL }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:SIGNING_PFX_BASE64)) {
+            "enabled=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            Write-Warning "Signing secrets are not configured; artifacts will be unsigned."
+            exit 0
+          }
+
+          $certificatePath = Join-Path $env:RUNNER_TEMP "mirafolio-signing.pfx"
+          [IO.File]::WriteAllBytes(
+            $certificatePath,
+            [Convert]::FromBase64String($env:SIGNING_PFX_BASE64))
+          $securePassword = ConvertTo-SecureString $env:SIGNING_PFX_PASSWORD -AsPlainText -Force
+          $certificate = Import-PfxCertificate `
+            -FilePath $certificatePath `
+            -CertStoreLocation Cert:\CurrentUser\My `
+            -Password $securePassword
+          $signTool = Get-ChildItem "${env:ProgramFiles(x86)}\Windows Kits\10\bin" `
+            -Filter signtool.exe -Recurse |
+            Where-Object FullName -Match '\\x64\\' |
+            Sort-Object FullName -Descending |
+            Select-Object -First 1 -ExpandProperty FullName
+          if (-not $signTool) {
+            throw "signtool.exe was not found"
+          }
+
+          "MIRAFOLIO_SIGNTOOL=$signTool" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "MIRAFOLIO_CERT_SHA1=$($certificate.Thumbprint)" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "MIRAFOLIO_TIMESTAMP_URL=$env:SIGNING_TIMESTAMP_URL" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "SIGNING_PFX_PATH=$certificatePath" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "enabled=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+      - name: Build application and installer
+        shell: cmd
+        run: build-installer.bat %VERSION%
+
+      - name: Verify Authenticode signatures
+        if: steps.signing.outputs.enabled == 'true'
+        shell: pwsh
+        run: |
+          & $env:MIRAFOLIO_SIGNTOOL verify /pa /v publish/MiraFolio.exe
+          & $env:MIRAFOLIO_SIGNTOOL verify /pa /v "dist/MiraFolio-Setup-$env:VERSION-win-x64.exe"
+
+      - name: Package portable build and checksums
+        shell: pwsh
+        run: |
+          $releaseDirectory = "artifacts/release"
+          $portableDirectory = "$releaseDirectory/portable"
+          New-Item -ItemType Directory -Path $portableDirectory -Force | Out-Null
+          Copy-Item publish/MiraFolio.exe $portableDirectory
+          Copy-Item LICENSE,README.md,README.zh-CN.md $portableDirectory
+
+          $portableZip = "$releaseDirectory/MiraFolio-$env:VERSION-win-x64-portable.zip"
+          Compress-Archive -Path "$portableDirectory/*" -DestinationPath $portableZip -CompressionLevel Optimal
+          Copy-Item "dist/MiraFolio-Setup-$env:VERSION-win-x64.exe" $releaseDirectory
+
+          $artifacts = Get-ChildItem $releaseDirectory -File |
+            Where-Object Name -Match '\.(exe|zip)$'
+          $checksums = foreach ($artifact in $artifacts) {
+            $hash = (Get-FileHash $artifact.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+            "$hash *$($artifact.Name)"
+          }
+          $checksums | Set-Content "$releaseDirectory/SHA256SUMS.txt" -Encoding ascii
+
+      - name: Generate SPDX SBOM
+        shell: pwsh
+        run: |
+          dotnet tool install --tool-path artifacts/tools Microsoft.Sbom.DotNetTool --version 4.1.5
+          & artifacts/tools/sbom-tool generate `
+            -b publish `
+            -bc . `
+            -m artifacts/sbom `
+            -pn MiraFolio `
+            -pv $env:VERSION `
+            -ps "MiraFolio contributors"
+          Copy-Item `
+            artifacts/sbom/_manifest/spdx_2.2/manifest.spdx.json `
+            "artifacts/release/MiraFolio-$env:VERSION-sbom.spdx.json"
+
+      - name: Upload review artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: MiraFolio-${{ env.VERSION }}-release-candidate
+          path: artifacts/release/*
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Attest public release artifacts
+        if: github.event.repository.visibility == 'public'
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            artifacts/release/*.exe
+            artifacts/release/*.zip
+          sbom-path: artifacts/release/MiraFolio-${{ env.VERSION }}-sbom.spdx.json
+
+      - name: Create or update draft release
+        if: github.event_name == 'push' || inputs.create_draft_release == true
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $releaseExists = gh release view $env:RELEASE_TAG 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $env:RELEASE_TAG artifacts/release/* --clobber
+          } else {
+            gh release create $env:RELEASE_TAG artifacts/release/* `
+              --draft `
+              --generate-notes `
+              --title "MiraFolio $env:VERSION"
+          }
+
+      - name: Remove signing certificate
+        if: always() && steps.signing.outputs.enabled == 'true'
+        shell: pwsh
+        run: |
+          Remove-Item $env:SIGNING_PFX_PATH -Force -ErrorAction SilentlyContinue
+          Get-ChildItem Cert:\CurrentUser\My\$env:MIRAFOLIO_CERT_SHA1 |
+            Remove-Item -Force -ErrorAction SilentlyContinue

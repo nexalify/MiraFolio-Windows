@@ -1,0 +1,52 @@
+## Build outputs
+bin/
+obj/
+publish/
+dist/
+artifacts/
+
+## User/IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Test & coverage
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## Logs & temp files
+*.log
+*.tmp
+*.temp
+
+## OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Cursor/local workspace artifacts
+.cursor/
+!.cursor/rules/
+!.cursor/rules/**
+
+## Local AI assistant configuration
+.claude/
+CLAUDE.md
+
+## Secrets and signing material
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+
+## Crash dumps
+*.dmp
