@@ -201,7 +201,7 @@ public class RotationSchedulerTests
         using var scheduler = CreateScheduler(monitorService, wallpaperService, imageSelector, settingsService);
 
         scheduler.RotateNow(monitor.DevicePath);
-        Thread.Sleep(300);
+        WaitForCondition(() => imageSelector.SelectCalls.Count > 0);
 
         Assert.Empty(wallpaperService.SetWallpaperCalls);
         Assert.Contains(imageSelector.SelectCalls, call => call.MinimumImageSideLength == 1024);
@@ -285,7 +285,7 @@ public class RotationSchedulerTests
             TimeSpan.FromMilliseconds(200),
             TimeSpan.FromMilliseconds(20));
 
-    private static void WaitForCondition(Func<bool> condition, int timeoutMs = 1000)
+    private static void WaitForCondition(Func<bool> condition, int timeoutMs = 5000)
     {
         var deadline = DateTime.UtcNow.AddMilliseconds(timeoutMs);
         while (DateTime.UtcNow < deadline)

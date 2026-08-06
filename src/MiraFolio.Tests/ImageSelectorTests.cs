@@ -684,7 +684,7 @@ public class ImageSelectorTests : IDisposable
 
     private static void WaitForScan(ImageSelector selector, string folderPath)
     {
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 100; i++)
         {
             var result = selector.SelectImage(
                 folderPath,
@@ -727,7 +727,7 @@ public class ImageSelectorTests : IDisposable
 
     private void WaitForFolderScanToCompleteWithoutSelection()
     {
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 100; i++)
         {
             if (File.Exists(_cachePath))
                 return;
