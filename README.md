@@ -78,25 +78,28 @@ the file is `MiraFolio-1.0.0-win-x64-portable.zip`. Extract the ZIP to a permane
 
 ## MiraFolio on mobile
 
-Take the same photo-first wallpaper experience beyond your desktop. MiraFolio is designed natively
-for each mobile platform, with controls and automation that fit the operating system.
+If you would like your favorite photos to stay with you on your phone and tablet too, try MiraFolio
+on mobile. Choose the photos you want to see, then let MiraFolio handle the rotation and tidying.
 
 ### iPhone & iPad — Available now
 
-Turn favorite photos into a no-repeat wallpaper rotation, curate the collection with a swipe,
-automate changes with Apple Shortcuts, and keep private photos in a protected album.
+Have a library full of photos you love, but keep seeing the same few? MiraFolio goes through every
+selected photo before starting over. Swipe away anything you no longer want in the rotation; with
+Apple Shortcuts, you can also change the wallpaper automatically each morning, when you get home,
+or when you plug in. Private photos can live in a separate, locked album.
 
-[Explore MiraFolio for iPhone & iPad](https://www.mirafolio.app/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_ios) ·
+[See MiraFolio for iPhone & iPad](https://www.mirafolio.app/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_ios) ·
 [Download on the App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — In release testing
 
-Preview first, then apply wallpapers directly to the home screen, lock screen, or both. Add
-scheduled rotation and quick actions without giving up control of the collection.
+On Android, preview a photo before setting it on the home screen, lock screen, or both. You can
+rotate on your schedule and move to the next photo from a home screen shortcut or Quick Settings
+tile, without opening the app each time.
 
-[Explore MiraFolio for Android](https://www.mirafolio.app/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_android)
+[See MiraFolio for Android](https://www.mirafolio.app/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_android)
 
-**Discover MiraFolio across every screen:**
+Want to see how MiraFolio works across more of your devices?
 [Visit the official MiraFolio website](https://www.mirafolio.app/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_mobile_website).
 
 ## Get started

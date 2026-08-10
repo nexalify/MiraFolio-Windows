@@ -58,22 +58,22 @@
 
 ## 모바일용 MiraFolio
 
-사진 중심의 배경화면 경험을 데스크톱 너머로 이어 가세요. MiraFolio는 운영체제에 어울리는 조작과 자동화를 제공하도록 각 모바일 플랫폼에 맞춰 네이티브로 설계되었습니다.
+좋아하는 사진을 휴대전화와 태블릿에서도 곁에 두고 싶다면 모바일용 MiraFolio를 사용해 보세요. 보고 싶은 사진만 고르면 순환과 정리는 MiraFolio가 맡습니다.
 
 ### iPhone 및 iPad — 지금 이용 가능
 
-좋아하는 사진을 중복 없이 배경화면으로 순환하고, 스와이프로 컬렉션을 정리하며, Apple 단축어로 변경을 자동화하세요. 개인 사진은 보호된 앨범에 보관할 수 있습니다.
+좋아하는 사진은 많은데 늘 몇 장만 반복해서 보이나요? MiraFolio는 선택한 사진을 모두 한 번씩 보여 준 뒤 새 순환을 시작합니다. 더 이상 순환하고 싶지 않은 사진은 가볍게 밀어서 제외하세요. Apple 단축어와 함께 사용하면 매일 아침, 집에 도착했을 때 또는 충전할 때 배경화면을 자동으로 바꿀 수도 있습니다. 개인 사진은 별도의 잠금 앨범에 보관할 수 있습니다.
 
-[iPhone 및 iPad용 MiraFolio 살펴보기](https://www.mirafolio.app/ko/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ko_ios) ·
+[iPhone 및 iPad용 MiraFolio 보기](https://www.mirafolio.app/ko/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ko_ios) ·
 [App Store에서 다운로드](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — 출시 테스트 중
 
-미리 본 뒤 홈 화면, 잠금 화면 또는 두 화면 모두에 배경화면을 바로 적용하세요. 컬렉션에 대한 제어권은 그대로 유지하면서 예약 순환과 빠른 작업을 사용할 수 있습니다.
+Android에서는 먼저 모습을 확인한 뒤 사진을 홈 화면, 잠금 화면 또는 두 화면 모두에 설정할 수 있습니다. 원하는 간격으로 자동 순환하고, 홈 화면 바로가기나 빠른 설정 타일에서 앱을 매번 열지 않고도 다음 사진으로 바꿀 수 있습니다.
 
-[Android용 MiraFolio 살펴보기](https://www.mirafolio.app/ko/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ko_android)
+[Android용 MiraFolio 보기](https://www.mirafolio.app/ko/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ko_android)
 
-**모든 화면에서 MiraFolio를 만나 보세요:**
+다른 기기에서의 MiraFolio도 궁금하신가요?
 [MiraFolio 공식 웹사이트 방문](https://www.mirafolio.app/ko/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ko_mobile_website).
 
 ## 시작하기

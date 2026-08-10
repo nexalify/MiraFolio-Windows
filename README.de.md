@@ -62,22 +62,22 @@ dauerhaften Ordner und starten Sie `MiraFolio.exe`. Eine Installation oder separ
 
 ## MiraFolio auf Mobilgeräten
 
-Nehmen Sie das fotofokussierte Hintergrund-Erlebnis mit über den Desktop hinaus. MiraFolio wird für jede mobile Plattform nativ entwickelt, mit Bedienelementen und Automatisierungen, die zum Betriebssystem passen.
+Wenn Ihre Lieblingsfotos Sie auch auf Smartphone und Tablet begleiten sollen, probieren Sie MiraFolio mobil aus. Wählen Sie aus, was Sie sehen möchten – um Rotation und Ordnung kümmert sich MiraFolio.
 
 ### iPhone & iPad — Jetzt verfügbar
 
-Verwandeln Sie Lieblingsfotos in eine Rotation ohne Wiederholungen, sortieren Sie die Sammlung per Wischgeste, automatisieren Sie Wechsel mit Apple Kurzbefehlen und bewahren Sie private Fotos in einem geschützten Album auf.
+Viele Lieblingsfotos, aber immer wieder dieselben wenigen auf dem Bildschirm? MiraFolio zeigt jedes ausgewählte Foto einmal, bevor die Runde von vorn beginnt. Was nicht mehr in die Rotation gehört, wischen Sie einfach weg. Mit Apple Kurzbefehlen kann das Hintergrundbild außerdem jeden Morgen, bei Ihrer Ankunft zu Hause oder beim Laden automatisch wechseln. Private Fotos lassen sich in einem separaten, gesperrten Album aufbewahren.
 
-[MiraFolio für iPhone & iPad entdecken](https://www.mirafolio.app/de/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=de_ios) ·
+[MiraFolio für iPhone & iPad ansehen](https://www.mirafolio.app/de/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=de_ios) ·
 [Im App Store laden](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — Im Veröffentlichungstest
 
-Erst eine Vorschau anzeigen, dann Hintergründe direkt auf Startbildschirm, Sperrbildschirm oder beide anwenden. Zeitgesteuerte Rotation und Schnellaktionen bieten Komfort, ohne die Kontrolle über die Sammlung abzugeben.
+Auf Android sehen Sie zuerst eine Vorschau und legen das Foto dann für Startbildschirm, Sperrbildschirm oder beide fest. Die Bilder können im gewählten Intervall wechseln; über eine Verknüpfung auf dem Startbildschirm oder eine Kachel in den Schnelleinstellungen springen Sie zur nächsten Aufnahme, ohne jedes Mal die App zu öffnen.
 
-[MiraFolio für Android entdecken](https://www.mirafolio.app/de/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=de_android)
+[MiraFolio für Android ansehen](https://www.mirafolio.app/de/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=de_android)
 
-**MiraFolio auf jedem Bildschirm entdecken:**
+Möchten Sie MiraFolio auf weiteren Geräten erleben?
 [Offizielle MiraFolio-Website besuchen](https://www.mirafolio.app/de/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=de_mobile_website).
 
 ## Erste Schritte

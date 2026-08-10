@@ -58,22 +58,22 @@ llama `MiraFolio-1.0.0-win-x64-portable.zip`. Extrae el ZIP en una carpeta perma
 
 ## MiraFolio en dispositivos móviles
 
-Lleva más allá del escritorio la misma experiencia de fondos centrada en tus fotos. MiraFolio está diseñado de forma nativa para cada plataforma móvil, con controles y automatizaciones adaptados al sistema operativo.
+Si quieres que tus fotos favoritas te acompañen también en el móvil y la tableta, prueba MiraFolio para móviles. Elige las fotos que quieres ver y deja que MiraFolio se encargue de rotarlas y mantener la colección ordenada.
 
 ### iPhone y iPad — Disponible ahora
 
-Convierte tus fotos favoritas en una rotación sin repeticiones, organiza la colección deslizando, automatiza los cambios con Atajos de Apple y guarda fotos privadas en un álbum protegido.
+¿Tienes muchas fotos que te encantan, pero siempre aparecen las mismas? MiraFolio muestra todas las fotos seleccionadas antes de empezar una nueva vuelta. Desliza para retirar las que ya no quieras en la rotación; con Atajos de Apple, el fondo también puede cambiar cada mañana, al llegar a casa o mientras cargas el dispositivo. Las fotos privadas pueden guardarse en un álbum separado y bloqueado.
 
-[Descubrir MiraFolio para iPhone y iPad](https://www.mirafolio.app/es/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_ios) ·
+[Ver MiraFolio para iPhone y iPad](https://www.mirafolio.app/es/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_ios) ·
 [Descargar en el App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — En pruebas de lanzamiento
 
-Previsualiza y aplica fondos directamente a la pantalla de inicio, la pantalla de bloqueo o ambas. Añade rotación programada y acciones rápidas sin perder el control de la colección.
+En Android, puedes previsualizar una foto antes de aplicarla a la pantalla de inicio, la pantalla de bloqueo o ambas. También puedes cambiar las imágenes según el intervalo que elijas y pasar a la siguiente desde un acceso directo o un mosaico de ajustes rápidos, sin abrir la aplicación cada vez.
 
-[Descubrir MiraFolio para Android](https://www.mirafolio.app/es/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_android)
+[Ver MiraFolio para Android](https://www.mirafolio.app/es/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_android)
 
-**Descubre MiraFolio en todas tus pantallas:**
+¿Quieres descubrir MiraFolio en otros dispositivos?
 [Visitar el sitio web oficial de MiraFolio](https://www.mirafolio.app/es/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_mobile_website).
 
 ## Primeros pasos

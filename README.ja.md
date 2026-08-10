@@ -58,22 +58,22 @@
 
 ## モバイル版 MiraFolio
 
-写真を中心にした壁紙体験を、デスクトップの先へ。MiraFolio は各モバイルプラットフォームに合わせてネイティブ設計され、OS に馴染む操作と自動化を提供します。
+お気に入りの写真をスマートフォンやタブレットでも身近に感じたいなら、モバイル版 MiraFolio をお試しください。見たい写真を選んだら、あとのローテーションと整理は MiraFolio におまかせ。
 
 ### iPhone・iPad — 配信中
 
-お気に入りの写真を重複なしで壁紙にローテーション。スワイプでコレクションを整理し、Apple ショートカットで変更を自動化できます。プライベートな写真は保護されたアルバムに保存できます。
+好きな写真がたくさんあるのに、いつも同じ数枚ばかり表示されていませんか？MiraFolio は選んだ写真をすべて一巡してから、次のラウンドを始めます。もうローテーションに入れたくない写真は、スワイプするだけで外せます。Apple ショートカットと組み合わせれば、毎朝、帰宅時、充電時などに壁紙を自動で変更。プライベートな写真は別のアルバムに保存してロックできます。
 
-[iPhone・iPad 版を見る](https://www.mirafolio.app/ja/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_ios) ·
+[iPhone・iPad 版 MiraFolio を見る](https://www.mirafolio.app/ja/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_ios) ·
 [App Store からダウンロード](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — リリーステスト中
 
-プレビューしてから、ホーム画面、ロック画面、または両方に直接適用できます。コレクションを自分で管理しながら、スケジュール切り替えとクイック操作を利用できます。
+Android では、仕上がりをプレビューしてから、ホーム画面、ロック画面、または両方に写真を設定できます。好きな間隔で自動的に切り替えられるほか、ホーム画面のショートカットやクイック設定タイルから、毎回 App を開かずに次の写真へ進めます。
 
-[Android 版を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android)
+[Android 版 MiraFolio を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android)
 
-**あらゆる画面で MiraFolio を：**
+ほかのデバイスでの MiraFolio も見てみませんか？
 [MiraFolio 公式サイトを見る](https://www.mirafolio.app/ja/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_mobile_website)。
 
 ## はじめかた
