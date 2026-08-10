@@ -29,8 +29,8 @@
 </p>
 
 > [!NOTE]
-> MiraFolio is currently under private release review. There is no public build yet. Official
-> downloads will appear only on the GitHub Releases page linked above.
+> MiraFolio is distributed as a portable Windows build. Official downloads are available only
+> from the GitHub Releases page linked above.
 
 ## A better wallpaper experience for every display
 
@@ -57,19 +57,16 @@
 - Start with Windows and keep everyday controls in the notification area.
 - Manage mixed landscape and portrait displays from one visual layout.
 
-## Download and install
+## Download and run
 
 Open the [MiraFolio Releases page](https://github.com/nexalify/MiraFolio-Windows/releases), select
-the newest release, and expand **Assets**.
-
-| Choose | Best for | How to use it |
-| --- | --- | --- |
-| `MiraFolio-Setup-<version>-win-x64.exe` | Most users | Download, run the installer, then open MiraFolio from the Start menu. |
-| `MiraFolio-<version>-win-x64-portable.zip` | Portable use | Download, extract the ZIP, then run `MiraFolio.exe`. |
+the newest release, expand **Assets**, and download
+`MiraFolio-<version>-win-x64-portable.zip`. Extract the ZIP to a permanent folder, then run
+`MiraFolio.exe`. No installation or separate .NET runtime is required.
 
 The automatically generated **Source code (zip)** and **Source code (tar.gz)** files are source
 archives, not Windows applications. Only download MiraFolio from this repository's official
-Releases page. If the page has no release, there is no official downloadable build yet.
+Releases page.
 
 ## Get started
 

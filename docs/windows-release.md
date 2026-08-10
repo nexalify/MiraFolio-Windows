@@ -1,72 +1,60 @@
 # Windows 发布指南
 
-## 推荐产物
+## 官方产物
 
-MiraFolio 保留两种发布形式：
+MiraFolio 仅发布 Windows x64 便携版：
 
-- `publish\MiraFolio.exe`：自包含单文件便携版，用户无需安装 .NET。
-- `dist\MiraFolio-Setup-<version>-win-x64.exe`：面向普通用户的标准安装包。
+- `MiraFolio-<version>-win-x64-portable.zip`：自包含应用，用户无需安装 .NET；
+- `SHA256SUMS.txt`：便携 ZIP 的 SHA-256；
+- `MiraFolio-<version>-sbom.spdx.json`：SPDX SBOM。
 
-公开发布建议以安装包为主，便携版作为备选。安装包使用 Inno Setup，按当前用户安装到 `%LOCALAPPDATA%\Programs\MiraFolio`，不需要管理员权限，也不依赖 Microsoft Store。
+ZIP 内包含 `MiraFolio.exe`、MIT License 和中英文 README。用户应将整个 ZIP 解压到固定文件夹，
+然后运行 `MiraFolio.exe`。GitHub 自动生成的 Source code 压缩包不是 Windows 应用。
 
-## 构建安装包
+仓库中的安装器脚本仅作为以后可能恢复安装版时的开发资料；GitHub Actions 不构建或上传安装包。
 
-在 Windows 上安装：
+## 本地构建便携版
 
-1. .NET 10 SDK（仓库通过 `global.json` 固定 SDK 功能带）。
-2. [Inno Setup 6 或 7](https://jrsoftware.org/isdl.php)。
-
-若用于商业发布，请同时阅读 Inno Setup 安装目录中的许可说明；官方请求商业用户购买商业许可。
-
-然后在仓库根目录运行：
+在 Windows 10 或 Windows 11 上安装仓库 `global.json` 指定的 .NET 10 SDK，然后运行：
 
 ```bat
-build-installer.bat 1.0.0
+publish.bat
 ```
 
-脚本会先生成 `win-x64` 自包含单文件 EXE，再编译安装包。固定的 Inno Setup `AppId` 使后续版本识别为同一个应用，可直接覆盖升级。
+也可以直接运行：
 
-安装器会创建开始菜单快捷方式，并提供可选的桌面快捷方式。升级或卸载时如果 MiraFolio 正在运行，安装器会要求先关闭应用。
+```powershell
+dotnet publish src/MiraFolio.App/MiraFolio.App.csproj `
+  -c Release `
+  -r win-x64 `
+  --self-contained true `
+  -p:Version=1.0.0 `
+  -p:PublishSingleFile=true `
+  -p:IncludeNativeLibrariesForSelfExtract=true `
+  -p:EnableCompressionInSingleFile=true `
+  -o publish
+```
+
+生成的入口文件为 `publish\MiraFolio.exe`。
 
 ## 代码签名
 
-当前 GitHub Release 采用未签名发布。未签名不会影响 MiraFolio 的安装和功能，但 Windows 可能显示
-“未知发布者”或 SmartScreen 警告，受企业安全策略管理的电脑也可能禁止运行。README 和 Release
-说明必须明确提示用户只从官方 Releases 页面下载并核对 `SHA256SUMS.txt`。
+当前 GitHub Release 的 `MiraFolio.exe` 未进行 Authenticode 签名。Windows SmartScreen 可能在首次
+运行时显示“未知发布者”或无法识别应用的提示，企业安全策略也可能阻止运行。
 
-如果以后取得代码签名服务或证书，`build-installer.bat` 仍支持使用 Windows 证书存储区中的证书：
-
-```bat
-set "MIRAFOLIO_SIGNTOOL=C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\signtool.exe"
-set "MIRAFOLIO_CERT_SHA1=<certificate thumbprint>"
-set "MIRAFOLIO_TIMESTAMP_URL=<RFC 3161 timestamp URL>"
-build-installer.bat 1.0.0
-```
-
-脚本使用 SHA-256 文件摘要和 SHA-256 RFC 3161 时间戳：先签名 `MiraFolio.exe`，再让 Inno Setup
-在编译阶段签名安装器和内置卸载程序。证书私钥、PFX 文件和密码不应提交到仓库。当前 GitHub
-Actions 工作流不读取或保存签名证书。
+README 和 Release 说明必须提示用户只从官方 Releases 页面下载，并使用 `SHA256SUMS.txt` 核对
+便携 ZIP。证书私钥、PFX 文件和密码不得提交到仓库或写入 Actions 日志。
 
 ## GitHub Release 工作流
 
 `.github/workflows/release.yml` 支持两种方式：
 
 - 推送 `v1.0.0` 形式的标签：构建并创建 Draft Release；
-- 手动运行：默认只上传保留 14 天的 Actions 候选产物，也可选择同时创建 Draft Release。手动创建时，
-  标签会指向启动工作流时选择的准确提交。
+- 手动运行：默认只上传保留 14 天的候选产物，也可同时创建 Draft Release。
 
-GitHub Release 继承仓库的可见性。仓库为 Private 时，Release 只对有仓库访问权限的账号可见；面向普通
-用户公开下载前，需要先检查提交历史、Actions 日志和仓库设置中没有敏感信息，再将仓库设为 Public。
-
-工作流会构建并测试项目，然后生成以下 Release assets：
-
-- `MiraFolio-Setup-<version>-win-x64.exe`：安装包；
-- `MiraFolio-<version>-win-x64-portable.zip`：便携版；
-- `SHA256SUMS.txt`：安装包和便携版的 SHA-256；
-- `MiraFolio-<version>-sbom.spdx.json`：SPDX SBOM。
-
-仓库公开后还会为 EXE 和 ZIP 生成 GitHub artifact attestation；它能证明产物来自该工作流，但不等同于
-Windows Authenticode 代码签名。
+工作流会恢复依赖、构建、测试、生成自包含单文件应用、打包便携 ZIP、生成 SHA-256 和 SBOM，
+并为公开仓库中的 ZIP 生成 GitHub artifact attestation。Attestation 能证明产物来自该工作流，
+但不等同于 Windows Authenticode 代码签名。
 
 ### 使用版本标签发布
 
@@ -81,37 +69,33 @@ git push origin v1.0.0
 
 然后：
 
-1. 打开仓库的 **Actions** 页面，进入 **Build GitHub release**，等待工作流成功。
-2. 打开 **Releases** 页面中的 `MiraFolio 1.0.0` 草稿。
-3. 下载并测试安装包与便携版，核对 `SHA256SUMS.txt`、版本号和自动生成的 Release notes。
-4. 确认未签名提示位于 Release notes 顶部，然后点击 **Publish release**。
+1. 在 **Actions** 中等待 **Build GitHub release** 成功；
+2. 打开对应 Draft Release；
+3. 下载并解压便携 ZIP，在 Windows 10/11 上启动 `MiraFolio.exe`；
+4. 使用 `SHA256SUMS.txt` 核对 ZIP；
+5. 确认 SBOM、未签名提示和 Release notes 后发布草稿。
 
-草稿发布后，用户才能在 Releases 页面和 README 的下载链接中看到这个版本。不要在草稿验证完成前移动
-或重复使用同一个版本标签。
+不要在草稿验证完成前移动或重复使用同一个版本标签。
 
 ### 手动生成候选产物
 
 在 **Actions** → **Build GitHub release** → **Run workflow** 中填写不带 `v` 的版本号：
 
-- `create_draft_release=false`：只生成 Actions artifact，适合发布前测试；
-- `create_draft_release=true`：同时建立对应版本标签和 Draft Release，然后按上面的步骤检查并发布。
+- `create_draft_release=false`：只生成 Actions artifact；
+- `create_draft_release=true`：同时创建对应标签和 Draft Release。
 
-## 可选发布渠道
+## 升级与移除
 
-等安装包有了稳定的 HTTPS 下载地址后，可以再向 Windows Package Manager Community Repository 提交 manifest。这不需要上架 Microsoft Store；`winget` 只会根据 manifest 下载并静默运行同一个 Inno Setup 安装包。首版先使用 GitHub Releases 直下即可，不必在本轮引入自动更新基础设施。
-
-## 升级与卸载
-
-- 新版本直接运行新安装包即可覆盖升级。
-- 卸载时会移除程序、快捷方式和开机启动项。
-- `%APPDATA%\MiraFolio` 中的设置、轮替状态、图片缓存和日志默认保留，重新安装后可继续使用。
+- 升级前退出 MiraFolio，将新 ZIP 解压到原文件夹并替换旧文件；
+- 若希望保留旧版以便回退，可将新版本解压到另一个固定文件夹；
+- 移除应用前先在设置中关闭开机启动，再删除程序文件夹；
+- `%APPDATA%\MiraFolio` 中的设置、轮替状态、图片缓存和日志不会随程序文件夹删除。
 
 ## 发布前检查
 
-1. 在干净的 Windows 10 和 Windows 11 环境各安装一次。
-2. 验证首次启动、开始菜单和桌面快捷方式。
-3. 从上一版本覆盖升级，确认 `%APPDATA%\MiraFolio` 数据保留。
-4. 验证卸载后开机启动项已移除。
-5. 重新计算安装包和便携 ZIP 的 SHA-256，并与 `SHA256SUMS.txt` 对照。
-6. 在开启 SmartScreen 的干净系统上确认未签名提示与 README 中的操作说明一致。
-7. 如果将来启用签名，再对安装包执行 `signtool verify /pa /v <setup.exe>`。
+1. 在干净的 Windows 10 和 Windows 11 x64 环境分别解压并启动；
+2. 验证首次启动、托盘、壁纸轮替和开机启动开关；
+3. 从上一版覆盖升级，确认 `%APPDATA%\MiraFolio` 数据保留；
+4. 核对 ZIP 内容只包含预期文件；
+5. 重新计算 ZIP 的 SHA-256，并与 `SHA256SUMS.txt` 对照；
+6. 在开启 SmartScreen 的干净系统上确认未签名提示与 Release 说明一致。

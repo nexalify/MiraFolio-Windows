@@ -59,13 +59,18 @@ jobs:
           dotnet build MiraFolio.sln -c Release --no-restore -p:Version=$env:VERSION
           dotnet test src/MiraFolio.Tests/MiraFolio.Tests.csproj -c Release --no-build
 
-      - name: Install Inno Setup
+      - name: Build portable application
         shell: pwsh
-        run: choco install innosetup --yes --no-progress
-
-      - name: Build unsigned application and installer
-        shell: cmd
-        run: build-installer.bat %VERSION%
+        run: |
+          dotnet publish src/MiraFolio.App/MiraFolio.App.csproj `
+            -c Release `
+            -r win-x64 `
+            --self-contained true `
+            -p:Version=$env:VERSION `
+            -p:PublishSingleFile=true `
+            -p:IncludeNativeLibrariesForSelfExtract=true `
+            -p:EnableCompressionInSingleFile=true `
+            -o publish
 
       - name: Package portable build and checksums
         shell: pwsh
@@ -78,10 +83,9 @@ jobs:
 
           $portableZip = "$releaseDirectory/MiraFolio-$env:VERSION-win-x64-portable.zip"
           Compress-Archive -Path "$portableDirectory/*" -DestinationPath $portableZip -CompressionLevel Optimal
-          Copy-Item "dist/MiraFolio-Setup-$env:VERSION-win-x64.exe" $releaseDirectory
 
           $artifacts = Get-ChildItem $releaseDirectory -File |
-            Where-Object Name -Match '\.(exe|zip)$'
+            Where-Object Name -Match '\.zip$'
           $checksums = foreach ($artifact in $artifacts) {
             $hash = (Get-FileHash $artifact.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
             "$hash *$($artifact.Name)"
@@ -115,9 +119,7 @@ jobs:
         if: github.event.repository.visibility == 'public'
         uses: actions/attest@v4
         with:
-          subject-path: |
-            artifacts/release/*.exe
-            artifacts/release/*.zip
+          subject-path: artifacts/release/*.zip
           sbom-path: artifacts/release/MiraFolio-${{ env.VERSION }}-sbom.spdx.json
 
       - name: Create or update GitHub release draft
@@ -132,9 +134,9 @@ jobs:
           } else {
             $releaseNotes = @'
           > [!IMPORTANT]
-          > These Windows binaries are currently not code-signed. Windows SmartScreen may show an
-          > unrecognized-app warning on first run. Download only from this official release and
-          > compare the file's SHA-256 hash with `SHA256SUMS.txt` before running it.
+          > This portable Windows build is currently not code-signed. Windows SmartScreen may show
+          > an unrecognized-app warning when `MiraFolio.exe` first runs. Download only from this
+          > official release and compare the ZIP's SHA-256 hash with `SHA256SUMS.txt`.
           '@
 
             if ("${{ github.event_name }}" -eq "push") {
