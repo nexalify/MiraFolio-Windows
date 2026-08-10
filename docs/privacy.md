@@ -17,10 +17,11 @@ requests independently of MiraFolio.
 
 ## Retention and deletion
 
-Uninstalling the application leaves `%APPDATA%\MiraFolio` in place so settings survive upgrades.
-Users may delete that directory after exiting MiraFolio to remove all application-managed local
-data. Removing an image in MiraFolio normally adds it to the application's exclusion list and does
-not delete the source file; permanent deletion is an explicit, confirmed action.
+Removing the portable application files leaves `%APPDATA%\MiraFolio` in place so settings survive
+upgrades or moving to a new version. Users may delete that directory after exiting MiraFolio to
+remove all application-managed local data. Removing an image in MiraFolio normally adds it to the
+application's exclusion list and does not delete the source file; permanent deletion is an
+explicit, confirmed action.
 
 ## Diagnostic reports
 

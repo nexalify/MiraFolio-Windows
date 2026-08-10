@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nexalify/MiraFolio-Windows/releases">
+  <a href="https://github.com/nexalify/MiraFolio-Windows/releases/latest">
     <img src="https://img.shields.io/badge/Downloads-GitHub%20Releases-7C3AED?style=for-the-badge&logo=github" alt="Open GitHub Releases" />
   </a>
 </p>
@@ -29,8 +29,8 @@
 </p>
 
 > [!NOTE]
-> MiraFolio is distributed as a portable Windows build. Official downloads are available only
-> from the GitHub Releases page linked above.
+> **MiraFolio 1.0.0 is now available.** Download the portable Windows x64 build from the
+> [official GitHub Release](https://github.com/nexalify/MiraFolio-Windows/releases/latest).
 
 ## A better wallpaper experience for every display
 
@@ -59,9 +59,9 @@
 
 ## Download and run
 
-Open the [MiraFolio Releases page](https://github.com/nexalify/MiraFolio-Windows/releases), select
-the newest release, expand **Assets**, and download
-`MiraFolio-<version>-win-x64-portable.zip`. Extract the ZIP to a permanent folder, then run
+Open the [latest MiraFolio Release](https://github.com/nexalify/MiraFolio-Windows/releases/latest),
+expand **Assets**, and download `MiraFolio-<version>-win-x64-portable.zip`. For the current release,
+the file is `MiraFolio-1.0.0-win-x64-portable.zip`. Extract the ZIP to a permanent folder, then run
 `MiraFolio.exe`. No installation or separate .NET runtime is required.
 
 The automatically generated **Source code (zip)** and **Source code (tar.gz)** files are source

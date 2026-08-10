@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nexalify/MiraFolio-Windows/releases">
+  <a href="https://github.com/nexalify/MiraFolio-Windows/releases/latest">
     <img src="https://img.shields.io/badge/下载-GitHub%20Releases-7C3AED?style=for-the-badge&logo=github" alt="打开 GitHub Releases" />
   </a>
 </p>
@@ -29,7 +29,9 @@
 </p>
 
 > [!NOTE]
-> MiraFolio 以 Windows 便携版形式发布，官方下载仅位于上方链接的 GitHub Releases 页面。
+> **MiraFolio 1.0.0 已正式发布。** 请从
+> [GitHub 官方 Release](https://github.com/nexalify/MiraFolio-Windows/releases/latest)
+> 下载 Windows x64 便携版。
 
 ## 更适合多显示器的壁纸体验
 
@@ -54,9 +56,10 @@
 
 ## 下载与运行
 
-打开 [MiraFolio Releases 页面](https://github.com/nexalify/MiraFolio-Windows/releases)，选择最新版本，
-展开 **Assets**，下载 `MiraFolio-<version>-win-x64-portable.zip`。将 ZIP 解压到一个固定文件夹，
-然后运行其中的 `MiraFolio.exe`；无需安装，也无需另外安装 .NET。
+打开 [MiraFolio 最新 Release](https://github.com/nexalify/MiraFolio-Windows/releases/latest)，展开
+**Assets**，下载 `MiraFolio-<version>-win-x64-portable.zip`。当前正式版文件名为
+`MiraFolio-1.0.0-win-x64-portable.zip`。将 ZIP 解压到一个固定文件夹，然后运行其中的
+`MiraFolio.exe`；无需安装，也无需另外安装 .NET。
 
 GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源码压缩包，不是可运行的
 Windows 应用。请只从本仓库的官方 Releases 页面下载。

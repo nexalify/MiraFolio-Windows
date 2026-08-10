@@ -2,15 +2,14 @@
 
 ## Supported versions
 
-Security fixes are provided for the latest released version. Before the first public release,
-only the current `main` branch is supported.
+Security fixes are provided for the latest published release. Users should upgrade to the newest
+version available on the repository's [Releases page](https://github.com/nexalify/MiraFolio-Windows/releases/latest).
+The `main` branch is under active development and is not treated as a supported release.
 
 ## Reporting a vulnerability
 
 Do not open a public issue for a suspected vulnerability or include sensitive user data in a
-report. Use GitHub's **Report a vulnerability** form in the repository Security tab after the
-repository is made public. While the repository remains private, contact a repository owner
-through GitHub.
+report. Use GitHub's private **Report a vulnerability** form in the repository's Security tab.
 
 Include the affected version or commit, reproduction steps, expected impact, and any suggested
 mitigation. Remove wallpaper paths, usernames, machine names, logs, screenshots, and other
