@@ -95,6 +95,7 @@ jobs:
       - name: Generate SPDX SBOM
         shell: pwsh
         run: |
+          New-Item -ItemType Directory -Path artifacts/sbom -Force | Out-Null
           dotnet tool install --tool-path artifacts/tools Microsoft.Sbom.DotNetTool --version 4.1.5
           & artifacts/tools/sbom-tool generate `
             -b publish `
