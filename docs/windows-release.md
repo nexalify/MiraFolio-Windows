@@ -13,6 +13,12 @@ ZIP 内包含 `MiraFolio.exe`、MIT License 和中英文 README。用户应将�
 
 仓库中的安装器脚本仅作为以后可能恢复安装版时的开发资料；GitHub Actions 不构建或上传安装包。
 
+## 当前正式版
+
+当前公开版本为 [MiraFolio 1.0.0](https://github.com/nexalify/MiraFolio-Windows/releases/tag/v1.0.0)，
+发布文件名为 `MiraFolio-1.0.0-win-x64-portable.zip`。面向用户的稳定下载入口统一使用
+[Latest Release](https://github.com/nexalify/MiraFolio-Windows/releases/latest)。
+
 ## 本地构建便携版
 
 在 Windows 10 或 Windows 11 上安装仓库 `global.json` 指定的 .NET 10 SDK，然后运行：
@@ -49,7 +55,7 @@ README 和 Release 说明必须提示用户只从官方 Releases 页面下载，
 
 `.github/workflows/release.yml` 支持两种方式：
 
-- 推送 `v1.0.0` 形式的标签：构建并创建 Draft Release；
+- 推送 `v1.0.1` 形式的标签：构建并创建 Draft Release；
 - 手动运行：默认只上传保留 14 天的候选产物，也可同时创建 Draft Release。
 
 工作流会恢复依赖、构建、测试、生成自包含单文件应用、打包便携 ZIP、生成 SHA-256 和 SBOM，
@@ -63,8 +69,8 @@ README 和 Release 说明必须提示用户只从官方 Releases 页面下载，
 ```powershell
 git switch main
 git pull --ff-only
-git tag -a v1.0.0 -m "MiraFolio 1.0.0"
-git push origin v1.0.0
+git tag -a v1.0.1 -m "MiraFolio 1.0.1"
+git push origin v1.0.1
 ```
 
 然后：
