@@ -76,7 +76,7 @@ jobs:
         shell: pwsh
         run: |
           $releaseDirectory = "artifacts/release"
-          $portableDirectory = "$releaseDirectory/portable"
+          $portableDirectory = "artifacts/portable"
           New-Item -ItemType Directory -Path $portableDirectory -Force | Out-Null
           Copy-Item publish/MiraFolio.exe $portableDirectory
           Copy-Item LICENSE,README.md,README.zh-CN.md $portableDirectory
