@@ -73,29 +73,28 @@
 `MiraFolio-1.0.0-win-x64-portable.zip`。将 ZIP 解压到一个固定文件夹，然后运行其中的
 `MiraFolio.exe`；无需安装，也无需另外安装 .NET。
 
-GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源码压缩包，不是可运行的
-Windows 应用。请只从本仓库的官方 Releases 页面下载。
-
 ## MiraFolio 移动端
 
-让以照片为中心的壁纸体验从桌面延伸到手机和平板。MiraFolio 针对每个平台原生设计，让操作与
-自动化真正贴合系统。
+如果你也想让喜欢的照片在手机和平板上陪伴你，可以试试 MiraFolio 移动端。选好想看的照片，
+接下来的轮换和整理就交给 MiraFolio。
 
 ### iPhone 与 iPad — 已上线
 
-把喜爱的照片变成不重复的壁纸轮换；轻扫即可整理图片，通过 Apple 快捷指令自动更换，还能将私密
-照片保存在受保护的独立相册中。
+相册里有很多喜欢的照片，却总是只看到那几张？MiraFolio 会先把选中的照片轮完一遍，再重新开始。
+遇到不想继续使用的照片，轻轻一滑就能移出轮换；配合 Apple 快捷指令，还可以在每天早上、到家或
+充电时自动换一张。私密照片也能放进独立相册并加锁。
 
-[了解 MiraFolio iPhone 与 iPad 版](https://www.mirafolio.app/zh-cn/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_ios) ·
+[看看 MiraFolio iPhone 与 iPad 版](https://www.mirafolio.app/zh-cn/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_ios) ·
 [前往 App Store 下载](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — 发布测试中
 
-预览后可直接应用到主屏幕、锁屏或两者，并支持定时轮换与快捷操作，同时保留对图片集合的完整控制。
+在 Android 上，你可以先预览效果，再把照片设为主屏、锁屏，或两边一起使用。还可以按自己选择的
+间隔自动换图，并从桌面或快捷设置里一键换到下一张，不必每次都打开 App。
 
-[了解 MiraFolio Android 版](https://www.mirafolio.app/zh-cn/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_android)
+[看看 MiraFolio Android 版](https://www.mirafolio.app/zh-cn/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_android)
 
-**在每一块屏幕上发现 MiraFolio：**
+想看看 MiraFolio 在其他设备上的体验？
 [访问 MiraFolio 官网](https://www.mirafolio.app/zh-cn/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_mobile_website)。
 
 ## 快速开始
@@ -119,8 +118,7 @@ Windows 应用。请只从本仓库的官方 Releases 页面下载。
 [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues)，安全问题请按照
 [SECURITY.md](SECURITY.md) 中的流程报告。
 
-开发与发布资料位于 [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)
-和 [docs/windows-release.md](docs/windows-release.md)。
+开发与贡献指南请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 MiraFolio 源代码采用 [MIT License](LICENSE)，产品名称、Logo 和图标遵循
 [品牌资产政策](TRADEMARKS.md)。

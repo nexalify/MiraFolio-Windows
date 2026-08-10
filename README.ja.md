@@ -56,26 +56,24 @@
 `MiraFolio-1.0.0-win-x64-portable.zip` です。ZIP を任意の固定フォルダーに展開し、
 `MiraFolio.exe` を実行します。インストールも別途 .NET ランタイムも必要ありません。
 
-自動生成される **Source code (zip)** と **Source code (tar.gz)** はソースコードのアーカイブであり、Windows アプリではありません。MiraFolio は必ずこのリポジトリの公式 Releases ページからダウンロードしてください。
-
 ## モバイル版 MiraFolio
 
-写真を中心にした壁紙体験を、デスクトップの先へ。MiraFolio は各モバイルプラットフォームに合わせてネイティブ設計され、OS に馴染む操作と自動化を提供します。
+お気に入りの写真をスマートフォンやタブレットでも身近に感じたいなら、モバイル版 MiraFolio をお試しください。見たい写真を選んだら、あとのローテーションと整理は MiraFolio におまかせ。
 
 ### iPhone・iPad — 配信中
 
-お気に入りの写真を重複なしで壁紙にローテーション。スワイプでコレクションを整理し、Apple ショートカットで変更を自動化できます。プライベートな写真は保護されたアルバムに保存できます。
+好きな写真がたくさんあるのに、いつも同じ数枚ばかり表示されていませんか？MiraFolio は選んだ写真をすべて一巡してから、次のラウンドを始めます。もうローテーションに入れたくない写真は、スワイプするだけで外せます。Apple ショートカットと組み合わせれば、毎朝、帰宅時、充電時などに壁紙を自動で変更。プライベートな写真は別のアルバムに保存してロックできます。
 
-[iPhone・iPad 版を見る](https://www.mirafolio.app/ja/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_ios) ·
+[iPhone・iPad 版 MiraFolio を見る](https://www.mirafolio.app/ja/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_ios) ·
 [App Store からダウンロード](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — リリーステスト中
 
-プレビューしてから、ホーム画面、ロック画面、または両方に直接適用できます。コレクションを自分で管理しながら、スケジュール切り替えとクイック操作を利用できます。
+Android では、仕上がりをプレビューしてから、ホーム画面、ロック画面、または両方に写真を設定できます。好きな間隔で自動的に切り替えられるほか、ホーム画面のショートカットやクイック設定タイルから、毎回 App を開かずに次の写真へ進めます。
 
-[Android 版を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android)
+[Android 版 MiraFolio を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android)
 
-**あらゆる画面で MiraFolio を：**
+ほかのデバイスでの MiraFolio も見てみませんか？
 [MiraFolio 公式サイトを見る](https://www.mirafolio.app/ja/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_mobile_website)。
 
 ## はじめかた
@@ -97,6 +95,6 @@
 
 壁紙、設定、キャッシュ、ログはすべてお使いの PC に保存されます。詳しくは[プライバシー情報（英語）](docs/privacy.md)をご覧ください。不具合や機能の提案は [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues) へお寄せください。セキュリティ上の問題は [SECURITY.md](SECURITY.md) の手順に従ってご報告ください。
 
-開発・リリース関連のドキュメントは [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)、[docs/windows-release.md](docs/windows-release.md) にあります。
+開発とコントリビューションについては [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
 
 MiraFolio のソースコードは [MIT License](LICENSE) で公開されています。製品名、ロゴ、アイコンには[ブランドアセットポリシー](TRADEMARKS.md)が適用されます。

@@ -56,26 +56,24 @@
 `MiraFolio-1.0.0-win-x64-portable.zip`. Распакуйте ZIP в постоянную папку и запустите
 `MiraFolio.exe`. Установка приложения или отдельной среды .NET не требуется.
 
-Автоматически созданные файлы **Source code (zip)** и **Source code (tar.gz)** являются архивами исходного кода, а не приложениями Windows. Скачивайте MiraFolio только с официальной страницы Releases этого репозитория.
-
 ## MiraFolio на мобильных устройствах
 
-Продолжите ориентированную на фотографии работу с обоями за пределами рабочего стола. MiraFolio разрабатывается отдельно для каждой мобильной платформы, поэтому элементы управления и автоматизация соответствуют операционной системе.
+Если вы хотите, чтобы любимые фотографии были рядом и на телефоне или планшете, попробуйте мобильную MiraFolio. Выберите снимки, которые хотите видеть, а ротацию и порядок оставьте MiraFolio.
 
 ### iPhone и iPad — Уже доступно
 
-Превратите любимые фотографии в ротацию без повторов, сортируйте коллекцию жестами, автоматизируйте смену обоев с помощью «Быстрых команд» Apple и храните личные фотографии в защищённом альбоме.
+Любимых фотографий много, а на экране появляются всё те же несколько снимков? MiraFolio покажет каждую выбранную фотографию, прежде чем начать новый круг. Смахните снимок, который больше не нужен в ротации; с «Быстрыми командами» Apple обои также могут меняться каждое утро, по возвращении домой или при подключении зарядки. Личные фотографии можно хранить в отдельном заблокированном альбоме.
 
-[Подробнее о MiraFolio для iPhone и iPad](https://www.mirafolio.app/ru/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_ios) ·
+[Посмотреть MiraFolio для iPhone и iPad](https://www.mirafolio.app/ru/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_ios) ·
 [Скачать в App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
 ### Android — На этапе тестирования релиза
 
-Просматривайте обои перед применением, а затем устанавливайте их сразу на главный экран, экран блокировки или оба экрана. Используйте ротацию по расписанию и быстрые действия, сохраняя полный контроль над коллекцией.
+На Android фотографию можно сначала просмотреть, а затем установить на главный экран, экран блокировки или оба экрана. Настройте удобный интервал смены и переходите к следующему снимку с ярлыка на главном экране или плитки быстрых настроек, не открывая приложение каждый раз.
 
-[Подробнее о MiraFolio для Android](https://www.mirafolio.app/ru/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_android)
+[Посмотреть MiraFolio для Android](https://www.mirafolio.app/ru/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_android)
 
-**Откройте MiraFolio на каждом экране:**
+Хотите увидеть MiraFolio и на других устройствах?
 [Посетить официальный сайт MiraFolio](https://www.mirafolio.app/ru/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_mobile_website).
 
 ## Начало работы
@@ -97,6 +95,6 @@
 
 Обои, настройки, кэш и журналы остаются на вашем компьютере. Подробнее см. в [примечаниях о конфиденциальности (на английском)](docs/privacy.md). Сообщайте об ошибках и предлагайте функции в [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues). О проблемах безопасности сообщайте в порядке, описанном в [SECURITY.md](SECURITY.md).
 
-Документация для разработчиков и публикации доступна в [CONTRIBUTING.md](CONTRIBUTING.md), [docs/architecture.md](docs/architecture.md) и [docs/windows-release.md](docs/windows-release.md).
+Рекомендации по разработке и участию в проекте приведены в [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Исходный код MiraFolio доступен по [лицензии MIT](LICENSE). Название продукта, логотип и значок защищены [правилами использования фирменных материалов](TRADEMARKS.md).
