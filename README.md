@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="https://www.mirafolio.app/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_top_website">Official Website</a> ·
   <a href="docs/privacy.md">Privacy</a> ·
   <a href="https://github.com/nexalify/MiraFolio-Windows/issues">Support</a>
 </p>
@@ -67,6 +68,29 @@ the file is `MiraFolio-1.0.0-win-x64-portable.zip`. Extract the ZIP to a permane
 The automatically generated **Source code (zip)** and **Source code (tar.gz)** files are source
 archives, not Windows applications. Only download MiraFolio from this repository's official
 Releases page.
+
+## MiraFolio on mobile
+
+Take the same photo-first wallpaper experience beyond your desktop. MiraFolio is designed natively
+for each mobile platform, with controls and automation that fit the operating system.
+
+### iPhone & iPad — Available now
+
+Turn favorite photos into a no-repeat wallpaper rotation, curate the collection with a swipe,
+automate changes with Apple Shortcuts, and keep private photos in a protected album.
+
+[Explore MiraFolio for iPhone & iPad](https://www.mirafolio.app/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_ios) ·
+[Download on the App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
+
+### Android — In release testing
+
+Preview first, then apply wallpapers directly to the home screen, lock screen, or both. Add
+scheduled rotation and quick actions without giving up control of the collection.
+
+[Explore MiraFolio for Android](https://www.mirafolio.app/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_android)
+
+**Discover MiraFolio across every screen:**
+[Visit the official MiraFolio website](https://www.mirafolio.app/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_mobile_website).
 
 ## Get started
 
