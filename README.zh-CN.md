@@ -29,8 +29,7 @@
 </p>
 
 > [!NOTE]
-> MiraFolio 目前处于私有发布 Review 阶段，暂时没有公开下载版本。官方安装包和便携版只会发布在
-> 上方链接的 GitHub Releases 页面。
+> MiraFolio 以 Windows 便携版形式发布，官方下载仅位于上方链接的 GitHub Releases 页面。
 
 ## 更适合多显示器的壁纸体验
 
@@ -53,19 +52,14 @@
 - 支持开机启动，日常操作可以在系统托盘完成。
 - 在一个可视化布局中管理横屏、竖屏等混合显示器组合。
 
-## 下载与安装
+## 下载与运行
 
 打开 [MiraFolio Releases 页面](https://github.com/nexalify/MiraFolio-Windows/releases)，选择最新版本，
-然后展开 **Assets**。
+展开 **Assets**，下载 `MiraFolio-<version>-win-x64-portable.zip`。将 ZIP 解压到一个固定文件夹，
+然后运行其中的 `MiraFolio.exe`；无需安装，也无需另外安装 .NET。
 
-| 下载文件 | 适合谁 | 使用方式 |
-| --- | --- | --- |
-| `MiraFolio-Setup-<version>-win-x64.exe` | 推荐大多数用户使用 | 下载并运行安装程序，然后从开始菜单打开 MiraFolio。 |
-| `MiraFolio-<version>-win-x64-portable.zip` | 需要免安装使用 | 下载并解压 ZIP，然后运行其中的 `MiraFolio.exe`。 |
-
-GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源码压缩包，不是 Windows
-安装程序。请只从本仓库的官方 Releases 页面下载；如果页面中还没有 Release，就表示目前还没有
-可供普通用户下载的官方版本。
+GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源码压缩包，不是可运行的
+Windows 应用。请只从本仓库的官方 Releases 页面下载。
 
 ## 快速开始
 
