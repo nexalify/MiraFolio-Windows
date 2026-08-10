@@ -56,8 +56,6 @@
 `MiraFolio-1.0.0-win-x64-portable.zip` です。ZIP を任意の固定フォルダーに展開し、
 `MiraFolio.exe` を実行します。インストールも別途 .NET ランタイムも必要ありません。
 
-自動生成される **Source code (zip)** と **Source code (tar.gz)** はソースコードのアーカイブであり、Windows アプリではありません。MiraFolio は必ずこのリポジトリの公式 Releases ページからダウンロードしてください。
-
 ## モバイル版 MiraFolio
 
 写真を中心にした壁紙体験を、デスクトップの先へ。MiraFolio は各モバイルプラットフォームに合わせてネイティブ設計され、OS に馴染む操作と自動化を提供します。
@@ -97,6 +95,6 @@
 
 壁紙、設定、キャッシュ、ログはすべてお使いの PC に保存されます。詳しくは[プライバシー情報（英語）](docs/privacy.md)をご覧ください。不具合や機能の提案は [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues) へお寄せください。セキュリティ上の問題は [SECURITY.md](SECURITY.md) の手順に従ってご報告ください。
 
-開発・リリース関連のドキュメントは [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)、[docs/windows-release.md](docs/windows-release.md) にあります。
+開発とコントリビューションについては [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
 
 MiraFolio のソースコードは [MIT License](LICENSE) で公開されています。製品名、ロゴ、アイコンには[ブランドアセットポリシー](TRADEMARKS.md)が適用されます。

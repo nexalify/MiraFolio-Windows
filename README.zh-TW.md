@@ -70,9 +70,6 @@
 `MiraFolio-1.0.0-win-x64-portable.zip`。將 ZIP 解壓縮到固定資料夾，再執行
 `MiraFolio.exe`；不需安裝，也不需另外安裝 .NET。
 
-GitHub 自動產生的 **Source code (zip)** 與 **Source code (tar.gz)** 是原始碼封存檔，不是可執行的
-Windows 應用程式。請只從本儲存庫的官方 Releases 頁面下載。
-
 ## MiraFolio 行動版
 
 讓以照片為核心的桌布體驗從桌面延伸到手機和平板。MiraFolio 針對各行動平台原生設計，讓操作與自動化真正融入作業系統。
@@ -114,8 +111,7 @@ Windows 應用程式。請只從本儲存庫的官方 Releases 頁面下載。
 Bug 與功能建議可提交至 [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues)，
 安全性問題請依照 [SECURITY.md](SECURITY.md) 中的流程回報。
 
-開發與發布文件位於 [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)
-與 [docs/windows-release.md](docs/windows-release.md)。
+開發與貢獻指南請參閱 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 MiraFolio 原始碼採用 [MIT License](LICENSE)；產品名稱、Logo 與圖示受
 [品牌資產政策](TRADEMARKS.md)規範。

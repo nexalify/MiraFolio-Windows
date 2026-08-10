@@ -56,8 +56,6 @@
 파일 이름은 `MiraFolio-1.0.0-win-x64-portable.zip`입니다. ZIP을 계속 사용할 폴더에 압축 해제한 뒤
 `MiraFolio.exe`를 실행하세요. 설치나 별도의 .NET 런타임은 필요하지 않습니다.
 
-자동으로 생성되는 **Source code (zip)**과 **Source code (tar.gz)**은 소스 코드 압축 파일이며 Windows 앱이 아닙니다. 이 저장소의 공식 Releases 페이지에서만 MiraFolio를 다운로드하세요.
-
 ## 모바일용 MiraFolio
 
 사진 중심의 배경화면 경험을 데스크톱 너머로 이어 가세요. MiraFolio는 운영체제에 어울리는 조작과 자동화를 제공하도록 각 모바일 플랫폼에 맞춰 네이티브로 설계되었습니다.
@@ -97,6 +95,6 @@
 
 배경화면, 설정, 캐시와 로그는 모두 사용자의 컴퓨터에 보관됩니다. 자세한 내용은 [개인정보 보호 안내(영문)](docs/privacy.md)를 확인하세요. 버그와 기능 제안은 [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues)에 남겨 주세요. 보안 문제는 [SECURITY.md](SECURITY.md)에 설명된 절차에 따라 신고해 주세요.
 
-개발 및 출시 문서는 [CONTRIBUTING.md](CONTRIBUTING.md), [docs/architecture.md](docs/architecture.md), [docs/windows-release.md](docs/windows-release.md)에서 확인할 수 있습니다.
+개발 및 기여 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)에서 확인할 수 있습니다.
 
 MiraFolio 소스 코드는 [MIT License](LICENSE)로 제공됩니다. 제품 이름, 로고 및 아이콘에는 [브랜드 자산 정책](TRADEMARKS.md)이 적용됩니다.

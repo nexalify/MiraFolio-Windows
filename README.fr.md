@@ -56,8 +56,6 @@ développez **Assets**, puis téléchargez `MiraFolio-<version>-win-x64-portable
 le fichier se nomme `MiraFolio-1.0.0-win-x64-portable.zip`. Extrayez le ZIP dans un dossier permanent,
 puis lancez `MiraFolio.exe`. Aucune installation ni aucun environnement .NET séparé n’est nécessaire.
 
-Les fichiers **Source code (zip)** et **Source code (tar.gz)** générés automatiquement sont des archives du code source, et non des applications Windows. Téléchargez MiraFolio uniquement depuis la page Releases officielle de ce dépôt.
-
 ## MiraFolio sur mobile
 
 Prolongez au-delà du bureau cette expérience de fonds d’écran centrée sur vos photos. MiraFolio est conçu nativement pour chaque plateforme mobile, avec des commandes et automatisations adaptées au système.
@@ -97,6 +95,6 @@ Répétez les trois premières étapes pour chaque écran supplémentaire à per
 
 Les fonds d’écran, réglages, caches et journaux restent sur votre ordinateur. Consultez les [notes de confidentialité (anglais)](docs/privacy.md) pour en savoir plus. Signalez les bugs ou proposez des fonctionnalités dans [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues). Pour toute question de sécurité, suivez la procédure décrite dans [SECURITY.md](SECURITY.md).
 
-La documentation de développement et de publication se trouve dans [CONTRIBUTING.md](CONTRIBUTING.md), [docs/architecture.md](docs/architecture.md) et [docs/windows-release.md](docs/windows-release.md).
+Pour contribuer au développement, consultez [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Le code source de MiraFolio est disponible sous [licence MIT](LICENSE). Le nom du produit, le logo et l’icône sont couverts par la [politique relative aux éléments de marque](TRADEMARKS.md).
