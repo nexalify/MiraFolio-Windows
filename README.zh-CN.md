@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="README.md">English</a> ·
+  <a href="https://www.mirafolio.app/zh-cn/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_top_website">官方网站</a> ·
   <a href="docs/privacy.md">隐私说明</a> ·
   <a href="https://github.com/nexalify/MiraFolio-Windows/issues">问题反馈</a>
 </p>
@@ -63,6 +64,28 @@
 
 GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源码压缩包，不是可运行的
 Windows 应用。请只从本仓库的官方 Releases 页面下载。
+
+## MiraFolio 移动端
+
+让以照片为中心的壁纸体验从桌面延伸到手机和平板。MiraFolio 针对每个平台原生设计，让操作与
+自动化真正贴合系统。
+
+### iPhone 与 iPad — 已上线
+
+把喜爱的照片变成不重复的壁纸轮换；轻扫即可整理图片，通过 Apple 快捷指令自动更换，还能将私密
+照片保存在受保护的独立相册中。
+
+[了解 MiraFolio iPhone 与 iPad 版](https://www.mirafolio.app/zh-cn/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_ios) ·
+[前往 App Store 下载](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
+
+### Android — 发布测试中
+
+预览后可直接应用到主屏幕、锁屏或两者，并支持定时轮换与快捷操作，同时保留对图片集合的完整控制。
+
+[了解 MiraFolio Android 版](https://www.mirafolio.app/zh-cn/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_android)
+
+**在每一块屏幕上发现 MiraFolio：**
+[访问 MiraFolio 官网](https://www.mirafolio.app/zh-cn/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_cn_mobile_website)。
 
 ## 快速开始
 
