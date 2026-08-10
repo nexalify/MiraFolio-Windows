@@ -19,7 +19,18 @@
 </p>
 
 <p align="center">
+  English ·
   <a href="README.zh-CN.md">简体中文</a> ·
+  <a href="README.zh-TW.md">繁體中文</a> ·
+  <a href="README.de.md">Deutsch</a> ·
+  <a href="README.fr.md">Français</a> ·
+  <a href="README.es.md">Español</a> ·
+  <a href="README.ja.md">日本語</a> ·
+  <a href="README.ko.md">한국어</a> ·
+  <a href="README.ru.md">Русский</a>
+</p>
+
+<p align="center">
   <a href="https://www.mirafolio.app/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=en_top_website">Official Website</a> ·
   <a href="docs/privacy.md">Privacy</a> ·
   <a href="https://github.com/nexalify/MiraFolio-Windows/issues">Support</a>
