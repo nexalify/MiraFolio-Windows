@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/luogreen/MiraFolio-Windows/releases">
+  <a href="https://github.com/nexalify/MiraFolio-Windows/releases">
     <img src="https://img.shields.io/badge/Downloads-GitHub%20Releases-7C3AED?style=for-the-badge&logo=github" alt="Open GitHub Releases" />
   </a>
 </p>
@@ -21,7 +21,7 @@
 <p align="center">
   <a href="README.zh-CN.md">简体中文</a> ·
   <a href="docs/privacy.md">Privacy</a> ·
-  <a href="https://github.com/luogreen/MiraFolio-Windows/issues">Support</a>
+  <a href="https://github.com/nexalify/MiraFolio-Windows/issues">Support</a>
 </p>
 
 <p align="center">
@@ -59,7 +59,7 @@
 
 ## Download and install
 
-Open the [MiraFolio Releases page](https://github.com/luogreen/MiraFolio-Windows/releases), select
+Open the [MiraFolio Releases page](https://github.com/nexalify/MiraFolio-Windows/releases), select
 the newest release, and expand **Assets**.
 
 | Choose | Best for | How to use it |
@@ -89,7 +89,7 @@ Repeat the first three steps for any other display you want to customize.
 ## Privacy, help, and project information
 
 Wallpapers, settings, caches, and logs stay on your computer. Read the [privacy notes](docs/privacy.md)
-for details. For bugs or feature ideas, use [GitHub Issues](https://github.com/luogreen/MiraFolio-Windows/issues).
+for details. For bugs or feature ideas, use [GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues).
 Please report security concerns through the process described in [SECURITY.md](SECURITY.md).
 
 Developer and release documentation is available in [CONTRIBUTING.md](CONTRIBUTING.md),

@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/luogreen/MiraFolio-Windows/releases">
+  <a href="https://github.com/nexalify/MiraFolio-Windows/releases">
     <img src="https://img.shields.io/badge/下载-GitHub%20Releases-7C3AED?style=for-the-badge&logo=github" alt="打开 GitHub Releases" />
   </a>
 </p>
@@ -21,7 +21,7 @@
 <p align="center">
   <a href="README.md">English</a> ·
   <a href="docs/privacy.md">隐私说明</a> ·
-  <a href="https://github.com/luogreen/MiraFolio-Windows/issues">问题反馈</a>
+  <a href="https://github.com/nexalify/MiraFolio-Windows/issues">问题反馈</a>
 </p>
 
 <p align="center">
@@ -55,7 +55,7 @@
 
 ## 下载与安装
 
-打开 [MiraFolio Releases 页面](https://github.com/luogreen/MiraFolio-Windows/releases)，选择最新版本，
+打开 [MiraFolio Releases 页面](https://github.com/nexalify/MiraFolio-Windows/releases)，选择最新版本，
 然后展开 **Assets**。
 
 | 下载文件 | 适合谁 | 使用方式 |
@@ -85,7 +85,7 @@ GitHub 自动生成的 **Source code (zip)** 和 **Source code (tar.gz)** 是源
 ## 隐私、帮助与项目信息
 
 壁纸、设置、缓存和日志都保留在你的电脑上，详情见 [隐私说明](docs/privacy.md)。Bug 和功能建议可提交到
-[GitHub Issues](https://github.com/luogreen/MiraFolio-Windows/issues)，安全问题请按照
+[GitHub Issues](https://github.com/nexalify/MiraFolio-Windows/issues)，安全问题请按照
 [SECURITY.md](SECURITY.md) 中的流程报告。
 
 开发与发布资料位于 [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)
