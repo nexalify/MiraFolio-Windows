@@ -74,18 +74,19 @@
 
 如果你也想讓喜歡的照片在手機和平板上陪伴你，可以試試 MiraFolio 行動版。選好想看的照片，接下來的輪替與整理就交給 MiraFolio。
 
-### iPhone 與 iPad — 現已推出
+### iPhone 與 iPad
 
 相簿裡有很多喜歡的照片，卻總是只看到那幾張？MiraFolio 會先把選取的照片輪完一遍，再重新開始。遇到不想繼續使用的照片，輕輕一滑就能移出輪替；搭配 Apple 捷徑，還能在每天早上、到家或充電時自動換一張。私人照片也能放進獨立相簿並上鎖。
 
 [看看 MiraFolio iPhone 與 iPad 版](https://www.mirafolio.app/zh-tw/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_tw_ios) ·
 [前往 App Store 下載](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
-### Android — 發布測試中
+### Android
 
 在 Android 上，你可以先預覽效果，再把照片設為主畫面、鎖定畫面，或兩邊一起使用。還可以按自己選擇的間隔自動換圖，並從桌面或快速設定中一鍵切換到下一張，不必每次都開啟 App。
 
-[看看 MiraFolio Android 版](https://www.mirafolio.app/zh-tw/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_tw_android)
+[看看 MiraFolio Android 版](https://www.mirafolio.app/zh-tw/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_tw_android) ·
+[前往 Google Play 下載](https://play.google.com/store/apps/details?id=com.nexalify.mirafolio)
 
 想看看 MiraFolio 在其他裝置上的體驗？
 [造訪 MiraFolio 官方網站](https://www.mirafolio.app/zh-tw/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=zh_tw_mobile_website)。

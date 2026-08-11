@@ -60,18 +60,19 @@ llama `MiraFolio-1.0.0-win-x64-portable.zip`. Extrae el ZIP en una carpeta perma
 
 Si quieres que tus fotos favoritas te acompañen también en el móvil y la tableta, prueba MiraFolio para móviles. Elige las fotos que quieres ver y deja que MiraFolio se encargue de rotarlas y mantener la colección ordenada.
 
-### iPhone y iPad — Disponible ahora
+### iPhone y iPad
 
 ¿Tienes muchas fotos que te encantan, pero siempre aparecen las mismas? MiraFolio muestra todas las fotos seleccionadas antes de empezar una nueva vuelta. Desliza para retirar las que ya no quieras en la rotación; con Atajos de Apple, el fondo también puede cambiar cada mañana, al llegar a casa o mientras cargas el dispositivo. Las fotos privadas pueden guardarse en un álbum separado y bloqueado.
 
 [Ver MiraFolio para iPhone y iPad](https://www.mirafolio.app/es/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_ios) ·
 [Descargar en el App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
-### Android — En pruebas de lanzamiento
+### Android
 
 En Android, puedes previsualizar una foto antes de aplicarla a la pantalla de inicio, la pantalla de bloqueo o ambas. También puedes cambiar las imágenes según el intervalo que elijas y pasar a la siguiente desde un acceso directo o un mosaico de ajustes rápidos, sin abrir la aplicación cada vez.
 
-[Ver MiraFolio para Android](https://www.mirafolio.app/es/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_android)
+[Ver MiraFolio para Android](https://www.mirafolio.app/es/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_android) ·
+[Descargar en Google Play](https://play.google.com/store/apps/details?id=com.nexalify.mirafolio)
 
 ¿Quieres descubrir MiraFolio en otros dispositivos?
 [Visitar el sitio web oficial de MiraFolio](https://www.mirafolio.app/es/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=es_mobile_website).
