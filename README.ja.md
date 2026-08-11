@@ -60,18 +60,19 @@
 
 お気に入りの写真をスマートフォンやタブレットでも身近に感じたいなら、モバイル版 MiraFolio をお試しください。見たい写真を選んだら、あとのローテーションと整理は MiraFolio におまかせ。
 
-### iPhone・iPad — 配信中
+### iPhone・iPad
 
 好きな写真がたくさんあるのに、いつも同じ数枚ばかり表示されていませんか？MiraFolio は選んだ写真をすべて一巡してから、次のラウンドを始めます。もうローテーションに入れたくない写真は、スワイプするだけで外せます。Apple ショートカットと組み合わせれば、毎朝、帰宅時、充電時などに壁紙を自動で変更。プライベートな写真は別のアルバムに保存してロックできます。
 
 [iPhone・iPad 版 MiraFolio を見る](https://www.mirafolio.app/ja/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_ios) ·
 [App Store からダウンロード](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
-### Android — リリーステスト中
+### Android
 
 Android では、仕上がりをプレビューしてから、ホーム画面、ロック画面、または両方に写真を設定できます。好きな間隔で自動的に切り替えられるほか、ホーム画面のショートカットやクイック設定タイルから、毎回 App を開かずに次の写真へ進めます。
 
-[Android 版 MiraFolio を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android)
+[Android 版 MiraFolio を見る](https://www.mirafolio.app/ja/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_android) ·
+[Google Play からダウンロード](https://play.google.com/store/apps/details?id=com.nexalify.mirafolio)
 
 ほかのデバイスでの MiraFolio も見てみませんか？
 [MiraFolio 公式サイトを見る](https://www.mirafolio.app/ja/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ja_mobile_website)。

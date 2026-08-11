@@ -60,18 +60,19 @@
 
 Если вы хотите, чтобы любимые фотографии были рядом и на телефоне или планшете, попробуйте мобильную MiraFolio. Выберите снимки, которые хотите видеть, а ротацию и порядок оставьте MiraFolio.
 
-### iPhone и iPad — Уже доступно
+### iPhone и iPad
 
 Любимых фотографий много, а на экране появляются всё те же несколько снимков? MiraFolio покажет каждую выбранную фотографию, прежде чем начать новый круг. Смахните снимок, который больше не нужен в ротации; с «Быстрыми командами» Apple обои также могут меняться каждое утро, по возвращении домой или при подключении зарядки. Личные фотографии можно хранить в отдельном заблокированном альбоме.
 
 [Посмотреть MiraFolio для iPhone и iPad](https://www.mirafolio.app/ru/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_ios) ·
 [Скачать в App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
-### Android — На этапе тестирования релиза
+### Android
 
 На Android фотографию можно сначала просмотреть, а затем установить на главный экран, экран блокировки или оба экрана. Настройте удобный интервал смены и переходите к следующему снимку с ярлыка на главном экране или плитки быстрых настроек, не открывая приложение каждый раз.
 
-[Посмотреть MiraFolio для Android](https://www.mirafolio.app/ru/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_android)
+[Посмотреть MiraFolio для Android](https://www.mirafolio.app/ru/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_android) ·
+[Скачать в Google Play](https://play.google.com/store/apps/details?id=com.nexalify.mirafolio)
 
 Хотите увидеть MiraFolio и на других устройствах?
 [Посетить официальный сайт MiraFolio](https://www.mirafolio.app/ru/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=ru_mobile_website).

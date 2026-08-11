@@ -60,18 +60,19 @@ puis lancez `MiraFolio.exe`. Aucune installation ni aucun environnement .NET sé
 
 Si vous aimeriez retrouver vos photos préférées sur votre téléphone et votre tablette, essayez MiraFolio sur mobile. Choisissez celles que vous souhaitez voir : MiraFolio se charge de les faire défiler et de garder la sélection en ordre.
 
-### iPhone et iPad — Disponible maintenant
+### iPhone et iPad
 
 Vous aimez beaucoup de photos, mais ce sont toujours les mêmes qui reviennent ? MiraFolio affiche chaque photo sélectionnée avant de recommencer un nouveau cycle. Écartez d’un geste celles que vous ne voulez plus voir ; avec Raccourcis d’Apple, le fond d’écran peut aussi changer chaque matin, à votre retour chez vous ou pendant la recharge. Les photos privées peuvent rester dans un album séparé et verrouillé.
 
 [Voir MiraFolio pour iPhone et iPad](https://www.mirafolio.app/fr/ios/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=fr_ios) ·
 [Télécharger dans l’App Store](https://apps.apple.com/app/mirafolio-wallpaper-shuffle/id6791570584)
 
-### Android — En phase de test avant publication
+### Android
 
 Sur Android, prévisualisez une photo avant de l’appliquer à l’écran d’accueil, à l’écran de verrouillage ou aux deux. Les images peuvent changer selon l’intervalle choisi, et un raccourci sur l’écran d’accueil ou une tuile des réglages rapides permet de passer à la suivante sans ouvrir l’application à chaque fois.
 
-[Voir MiraFolio pour Android](https://www.mirafolio.app/fr/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=fr_android)
+[Voir MiraFolio pour Android](https://www.mirafolio.app/fr/android/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=fr_android) ·
+[Télécharger sur Google Play](https://play.google.com/store/apps/details?id=com.nexalify.mirafolio)
 
 Envie de découvrir MiraFolio sur d’autres appareils ?
 [Visiter le site officiel de MiraFolio](https://www.mirafolio.app/fr/?utm_source=github&utm_medium=readme&utm_campaign=windows_mobile_cross_promo&utm_content=fr_mobile_website).
